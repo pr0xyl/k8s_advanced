@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: infra-apps
-  namespace: argocd
+  namespace: argo
 spec:
   destination:
-    namespace: argocd
+    namespace: argo
     server: https://kubernetes.default.svc
   project: default
   source:
     path: infra
-    repoURL: $GIT_REPO_URL
+    repoURL: https://github.com/pr0xyl/k8s_advanced.git
